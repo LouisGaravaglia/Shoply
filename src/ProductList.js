@@ -5,12 +5,17 @@ import './App.css';
 
 function ProductList() {
   const items = useSelector(store => store.products);
+  const cart = useSelector(store => store.cart)
   const dispatch = useDispatch();
   const addToCart = (id) => {
       dispatch({type:"ADD_TO_CART", id});
+      console.log(id);
+      console.log("Cart after adding: ", cart);
   };
   const removeFromCart = (id) => {
       dispatch({type:"REMOVE_FROM_CART", id});
+      console.log(id);
+      console.log("Cart after removing: ", cart);
   };
   return (
     <div className="ProductList">
