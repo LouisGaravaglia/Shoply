@@ -23,8 +23,9 @@ function ItemButtons({idx}) {
       console.log("Cart after removing: ", cart);
   };
   return (
-    <div className="Item">
+    <div>
        <label className="ItemQuantity" htmlFor="quantity">Quantity: </label>
+       
        <input 
            type="number"
            min="1"
@@ -33,7 +34,9 @@ function ItemButtons({idx}) {
            value={quantity}
            onChange={handleChange}
        />
+       
        <div className="ItemButtonGroup">
+        <br></br>
        <button onClick={() => add(idx, quantity)}>ADD</button>
        <button onClick={() => remove(idx)}>REMOVE</button>
        </div>

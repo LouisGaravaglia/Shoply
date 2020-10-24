@@ -6,15 +6,17 @@ import './App.css';
 function Item({idx, name, price, description, url}) {
   
   return (
-      <Link to={`/products/${idx}`}>
+      
     <div className="Item">
+    <Link to={`/products/${idx}`}>
        <h3>{name.toUpperCase()}</h3>
        <br></br>
        <h4>${price}</h4>
        <br></br>
+       </Link>
     <ItemButtons idx={idx} />
     </div>
-    </Link>
+    
   );
 }
 

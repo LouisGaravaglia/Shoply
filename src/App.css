@@ -1,11 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+}
+
+body {
+    background-color: #f7f4f4;
 }
 
 .App {
   text-align: center;
-  background-color: #f7f4f4;
+
 }
 
 .ProductListHeader {
@@ -17,6 +22,7 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .Item {
@@ -26,6 +32,36 @@
   background-color: #ffffff;
   box-shadow: 4px 5px rgba(0, 0, 0, .05);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+.ItemDetails {
+  flex: 0 0 20%;
+  margin: 20px 20px;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  box-shadow: 4px 5px rgba(0, 0, 0, .05);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.NavBar {
+  display: block;
+  background-color:rgb(32, 114, 255);
+  padding: 20px 0;
+}
+
+.NavBarLink {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 20px;
+}
+
+img {
+  margin: 80px 0;
+  width: 180px;
+  height: auto;
 }
 
 input {
@@ -43,11 +79,11 @@ button {
   color: white;
   padding: 10px 20px;
   margin: 10px 10px;
-  background-color: rgb(0, 221, 237);
+  background-color: rgb(32, 114, 255);
 }
 
 button:hover {
-  background-color: rgb(3, 165, 177);
+  background-color: rgb(6, 78, 201);
 }
 
 .ItemButtonGroup {
