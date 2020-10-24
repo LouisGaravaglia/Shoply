@@ -1,49 +1,20 @@
-import React, { useState } from "react";
-import {useSelector, useDispatch} from "react-redux";
-import { addToCart, removeFromCart } from "./actions";
+import React from "react";
+import { Link } from "react-router-dom";
+import ItemButtons from "./ItemButtons";
 import './App.css';
 
 function Item({idx, name, price, description, url}) {
-    const [quantity, setQuantity] = useState(1);
-    const dispatch = useDispatch();
-    const cart = useSelector(store => store.cart)
-
-    const handleChange = (e) => {
-        setQuantity(e.target.value)
-        console.log("hi");
-    }
-    const add = (id, quantity) => {
-      dispatch(addToCart(id, quantity));
-      console.log(id);
-      console.log("Cart after adding: ", cart);
-  };
-    const remove = (id) => {
-      dispatch(removeFromCart(id));
-      console.log(id);
-      console.log("Cart after removing: ", cart);
-  };
+  
   return (
+      <Link to={`/products/${idx}`}>
     <div className="Item">
        <h3>{name.toUpperCase()}</h3>
-       <p>{description}</p>
        <br></br>
        <h4>${price}</h4>
-       <img src={url} alt=""/>
        <br></br>
-       <label className="ItemQuantity" htmlFor="quantity">Quantity: </label>
-       <input 
-           type="number"
-           min="1"
-           id="quantity"
-           name="quantity"
-           value={quantity}
-           onChange={handleChange}
-       />
-       <div className="ItemButtonGroup">
-       <button onClick={() => add(idx, quantity)}>ADD</button>
-       <button onClick={() => remove(idx)}>REMOVE</button>
-       </div>
+    <ItemButtons idx={idx} />
     </div>
+    </Link>
   );
 }
 
