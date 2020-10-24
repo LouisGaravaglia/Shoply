@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import {useSelector, useDispatch} from "react-redux";
+import { addToCart, removeFromCart } from "./actions";
 import './App.css';
 
-function Item({idx, name, price, description, url, addToCart, removeFromCart}) {
+function Item({idx, name, price, description, url}) {
     const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
+    const cart = useSelector(store => store.cart)
+
     const handleChange = (e) => {
         setQuantity(e.target.value)
         console.log("hi");
     }
+    const add = (id, quantity) => {
+      dispatch(addToCart(id, quantity));
+      console.log(id);
+      console.log("Cart after adding: ", cart);
+  };
+    const remove = (id) => {
+      dispatch(removeFromCart(id));
+      console.log(id);
+      console.log("Cart after removing: ", cart);
+  };
   return (
     <div className="Item">
        <h3>{name.toUpperCase()}</h3>
@@ -26,8 +40,8 @@ function Item({idx, name, price, description, url, addToCart, removeFromCart}) {
            onChange={handleChange}
        />
        <div className="ItemButtonGroup">
-       <button onClick={() => addToCart(idx, quantity)}>ADD</button>
-       <button onClick={() => removeFromCart(idx)}>REMOVE</button>
+       <button onClick={() => add(idx, quantity)}>ADD</button>
+       <button onClick={() => remove(idx)}>REMOVE</button>
        </div>
     </div>
   );

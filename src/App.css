@@ -18,6 +18,7 @@
   align-content: center;
   justify-content: center;
 }
+
 .Item {
   flex: 0 0 20%;
   margin: 5px 20px;
@@ -48,8 +49,3 @@ button {
 .ItemButtonGroup {
   display: block;
 }
-
-/* .ItemQuantity {
-  color: red;
-  padding-top: 50px;
-} */
