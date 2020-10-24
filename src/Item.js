@@ -10,11 +10,13 @@ function Item({idx, name, price, description, url, addToCart, removeFromCart}) {
     }
   return (
     <div className="Item">
-       <p>Name: {name}</p>
-       <p>description: {description}</p>
-       <p>price: {price}</p>
+       <h3>{name.toUpperCase()}</h3>
+       <p>{description}</p>
+       <br></br>
+       <h4>${price}</h4>
        <img src={url} alt=""/>
-       <label htmlFor="quantity">Quantity</label>
+       <br></br>
+       <label className="ItemQuantity" htmlFor="quantity">Quantity: </label>
        <input 
            type="number"
            min="1"
@@ -23,8 +25,10 @@ function Item({idx, name, price, description, url, addToCart, removeFromCart}) {
            value={quantity}
            onChange={handleChange}
        />
-       <button onClick={() => addToCart(idx, quantity)}>Add to Cart</button>
-       <button onClick={() => removeFromCart(idx)}>Remove from Cart</button>
+       <div className="ItemButtonGroup">
+       <button onClick={() => addToCart(idx, quantity)}>ADD</button>
+       <button onClick={() => removeFromCart(idx)}>REMOVE</button>
+       </div>
     </div>
   );
 }

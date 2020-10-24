@@ -25,11 +25,15 @@ function ProductList() {
       console.log("Cart after removing: ", cart);
   };
   return (
+      <>
+      <div className="ProductListHeader">
+        <h1>Our list of products</h1>
+        <h3>TOTAL # OF ITEMS IN CART: {cartCount}</h3>
+      </div>
     <div className="ProductList">
-        <h1>TOTAL # OF ITEMS IN CART: {cartCount}</h1>
-        <h2>Our list of products</h2>
         {Object.keys(items).map(key => <Item removeFromCart={removeFromCart} idx={key} addToCart={addToCart} key={key} name={items[key].name} price={items[key].price} description={items[key].description} url={items[key].url}/>)}
     </div>
+    </>
   );
 }
 
