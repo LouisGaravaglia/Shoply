@@ -46,6 +46,10 @@ button {
   background-color: rgb(0, 221, 237);
 }
 
+button:hover {
+  background-color: rgb(3, 165, 177);
+}
+
 .ItemButtonGroup {
   display: block;
 }
