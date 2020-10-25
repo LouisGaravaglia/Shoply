@@ -2,14 +2,14 @@
   "products": {
     "47314fa1-ae56-4eae-80be-af6691145951": {
       "name": "tv",
-      "price": 219.99,
-      "description": "A beautiful, big-screen TV. Because hey, Netflix isn't going to watch itself.",
+      "price": 400.99,
+      "description": "A beautiful, big-screen TV. Where you can just sit down and relax",
       "image_url": "https://images.samsung.com/is/image/samsung/latin_en-hd-j4300ah-un32j4300ahxpa-001-front-indigo-blue"
     },
     "3fdd689a-02cc-4ae7-903b-f6d2776ff3b9": {
       "name": "microwave",
-      "price": 100.00,
-      "description": "Heat your food with the power of SCIENCE!",
+      "price": 78.00,
+      "description": "Heat your food with the power of yummines!",
       "image_url": "https://target.scene7.com/is/image/Target/GUEST_c59b9457-3ee1-463b-ad0a-42f48d06c140"
     },
     "b04b779c-1cfb-48a7-8424-25a8c7e608ae": {
@@ -20,7 +20,7 @@
     },
     "4260bf52-218a-480e-87ea-4ff42470ce98": {
       "name": "chair",
-      "price": 100.89,
+      "price": 89.89,
       "description": "It's a chair. You can sit in it.",
       "image_url": "https://www.ikea.com/PIAimages/0355482_PE547815_S5.JPG"
     },
@@ -32,7 +32,7 @@
     },
     "2266b2d6-3d71-4356-8065-392f1fceab07": {
       "name": "phone",
-      "price": 399.99,
+      "price": 589.99,
       "description": "Because there are absolutely no downsides that come with easier access to social media.",
       "image_url": "https://images-na.ssl-images-amazon.com/images/I/717DO5Q-aCL._SY879_.jpg"
     }

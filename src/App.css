@@ -89,3 +89,21 @@ button:hover {
 .ItemButtonGroup {
   display: block;
 }
+
+.CartList {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.CartItem {
+  flex: 0 0 100%;
+  margin: 5px 20px;
+  padding: 15px 40px;
+  background-color: #ffffff;
+  box-shadow: 4px 5px rgba(0, 0, 0, .05);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}

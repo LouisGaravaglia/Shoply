@@ -5,11 +5,18 @@ import './App.css';
 
 function ProductList() {
   const items = useSelector(store => store.products);
-  const cart = useSelector(store => store.cart)
+  let cart;
+  cart = useSelector(store => store.cart);
+  let cartCount;
   const cartQuantities = cart.map(i => i.quantity);
-  const cartCount = cartQuantities.reduce(function(accumulator, currentValue) {
+  if(cart[0]){
+    cartCount = cartQuantities.reduce(function(accumulator, currentValue) {
       return accumulator + currentValue
   })
+  } else {
+    cartCount = 0
+  }
+
  
   return (
       <>
