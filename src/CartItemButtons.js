@@ -3,8 +3,8 @@ import {useSelector, useDispatch} from "react-redux";
 import { updateCart, removeFromCart } from "./actions";
 import './App.css';
 
-function CartItemButtons({idx}) {
-    const [quantity, setQuantity] = useState(1);
+function CartItemButtons({idx, currentQuantity}) {
+    const [quantity, setQuantity] = useState(currentQuantity);
     const dispatch = useDispatch();
     const cart = useSelector(store => store.cart)
 
@@ -24,7 +24,7 @@ function CartItemButtons({idx}) {
     };
   return (
     <div>
-       <label className="ItemQuantity" htmlFor="quantity">Quantity: </label>
+       <label className="ItemQuantity" htmlFor="quantity">Update Quantity: </label>
        
        <input 
            type="number"

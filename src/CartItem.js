@@ -7,7 +7,7 @@ function CartItem({id, name, quantity, img}) {
   return (
       <div className="CartItem">
 
-        <p>{name}</p>
+        <h1>{name}</h1>
                 <img src={img} alt="" />
         <p>QUANTITY: {quantity}</p>
 
@@ -15,7 +15,7 @@ function CartItem({id, name, quantity, img}) {
        
        <div className="ItemButtonGroup">
         <br></br>
-        <CartItemButtons idx={id}/>
+        <CartItemButtons idx={id} currentQuantity={quantity}/>
        </div>
 
 
